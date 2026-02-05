@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ccso6bo45hnt1"]
+
+[ext_resource type="Texture2D" uid="uid://c6k8w2h1c5q7o" path="res://assets/16 Bit School Asset Pack/Stall Door.png" id="1_nhqrj"]
+[ext_resource type="Texture2D" uid="uid://dtj8orcmnchc1" path="res://assets/16 Bit School Asset Pack/Left Side Stall.png" id="2_ptl1d"]
+[ext_resource type="Texture2D" uid="uid://cyyhww6j6unya" path="res://assets/16 Bit School Asset Pack/Left Top Stall.png" id="3_mqgre"]
+[ext_resource type="Texture2D" uid="uid://d7twkeeqmona" path="res://assets/16 Bit School Asset Pack/Right Side Stall.png" id="4_ocoto"]
+[ext_resource type="Texture2D" uid="uid://ba38x164md2ko" path="res://assets/16 Bit School Asset Pack/Right Top Stall.png" id="5_bs4hi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvw85"]
+size = Vector2(52, 78)
+
+[node name="ToiletDoor" type="StaticBody2D" unique_id=750148131]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=397707126]
+texture = ExtResource("1_nhqrj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=643299812]
+position = Vector2(0, -25)
+shape = SubResource("RectangleShape2D_cvw85")
+
+[node name="LeftSideStall" type="Sprite2D" parent="." unique_id=1224374033]
+position = Vector2(-32, 0)
+texture = ExtResource("2_ptl1d")
+
+[node name="LeftTopStall" type="Sprite2D" parent="." unique_id=507225998]
+position = Vector2(-32, -48)
+texture = ExtResource("3_mqgre")
+
+[node name="RightSideStall" type="Sprite2D" parent="." unique_id=1817994164]
+position = Vector2(31, 0)
+texture = ExtResource("4_ocoto")
+
+[node name="RightTopStall" type="Sprite2D" parent="." unique_id=1319586971]
+position = Vector2(31, -48)
+texture = ExtResource("5_bs4hi")

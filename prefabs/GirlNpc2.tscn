@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bl6pi3rej0dfv"]
+
+[ext_resource type="Texture2D" uid="uid://c7dxugv73oupp" path="res://assets/npc/gir_npc3.png" id="1_prs4p"]
+[ext_resource type="Script" uid="uid://balvg0hqfordq" path="res://scripts/girl_npc_2.gd" id="1_yr4c5"]
+[ext_resource type="FontFile" uid="uid://hsjljn64n1ap" path="res://prefabs/kvn-97.ttf" id="3_wa0wv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33wbl"]
+atlas = ExtResource("1_prs4p")
+region = Rect2(465, 0, 155, 189)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yr4c5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33wbl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wa0wv"]
+radius = 15.0
+height = 36.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xt1d3"]
+radius = 43.289722
+
+[node name="GirlNpc2" type="CharacterBody2D" unique_id=665140670]
+script = ExtResource("1_yr4c5")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=274363011]
+position = Vector2(4.9999995, -11.999999)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_yr4c5")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=520822743]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_wa0wv")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=835614687]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=385154404]
+shape = SubResource("CircleShape2D_xt1d3")
+
+[node name="NameLabel" type="Label" parent="." unique_id=115576172]
+offset_left = -4.0
+offset_top = -65.0
+offset_right = 36.0
+offset_bottom = -42.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 19
+text = "T"
+
+[node name="Panel" type="Panel" parent="." unique_id=2138558675]
+visible = false
+offset_left = -39.0
+offset_top = -69.0
+offset_right = 53.0
+offset_bottom = -41.0
+
+[node name="DialogueLabel" type="RichTextLabel" parent="Panel" unique_id=1121485561]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 86.0
+offset_bottom = 45.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_wa0wv")
+text = "Hello"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

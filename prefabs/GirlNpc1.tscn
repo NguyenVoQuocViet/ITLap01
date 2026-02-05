@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://drvi135kaludk"]
+
+[ext_resource type="Script" uid="uid://iy51ynpus6h5" path="res://scripts/girl_npc_1.gd" id="1_5wwes"]
+[ext_resource type="Texture2D" uid="uid://dksvqpf5iqamc" path="res://assets/npc/girl_npc2.png" id="2_75r0r"]
+[ext_resource type="FontFile" uid="uid://hsjljn64n1ap" path="res://prefabs/kvn-97.ttf" id="3_75r0r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4vab"]
+atlas = ExtResource("2_75r0r")
+region = Rect2(47, 0, 367, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w5s4p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4vab")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eeq14"]
+radius = 16.0
+height = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jfn7o"]
+radius = 34.0147
+
+[node name="GirlNpc1" type="CharacterBody2D" unique_id=1188223588]
+script = ExtResource("1_5wwes")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=945366905]
+position = Vector2(0, 9.079997)
+scale = Vector2(0.18, 0.16226564)
+sprite_frames = SubResource("SpriteFrames_w5s4p")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1122860504]
+position = Vector2(3, 16)
+shape = SubResource("CapsuleShape2D_eeq14")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1743588672]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1496254201]
+position = Vector2(4, 6)
+shape = SubResource("CircleShape2D_jfn7o")
+
+[node name="NameLabel" type="Label" parent="." unique_id=628462448]
+offset_left = -5.0
+offset_top = -54.0
+offset_right = 35.0
+offset_bottom = -26.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Q"
+
+[node name="Panel" type="Panel" parent="." unique_id=985077544]
+visible = false
+z_index = 1
+offset_left = -68.0
+offset_top = -61.0
+offset_right = 83.0
+offset_bottom = -34.0
+
+[node name="DialogueLabel" type="RichTextLabel" parent="Panel" unique_id=1737328248]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 158.0
+offset_bottom = 31.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_75r0r")
+text = "Chào bạn!!"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

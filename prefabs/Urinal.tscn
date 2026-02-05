@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://db7g2nidpwiks"]
+
+[ext_resource type="Texture2D" uid="uid://da4qides5pj6j" path="res://assets/16 Bit School Asset Pack/Urinal.png" id="1_t632g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtehs"]
+size = Vector2(15, 7)
+
+[node name="Urinal" type="StaticBody2D" unique_id=2085978421]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1917450008]
+texture = ExtResource("1_t632g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2095472140]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_mtehs")

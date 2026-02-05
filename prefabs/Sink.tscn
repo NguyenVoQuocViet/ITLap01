@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cpif4ant4b6is"]
+
+[ext_resource type="Texture2D" uid="uid://dpiy1vjb7i418" path="res://assets/16 Bit School Asset Pack/Bathroom Sink with Mirror.png" id="1_v00la"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sral6"]
+size = Vector2(28, 32)
+
+[node name="Sink" type="StaticBody2D" unique_id=263814729]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=258807356]
+texture = ExtResource("1_v00la")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=904543026]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_sral6")

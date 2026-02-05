@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://ci87dt6mhvxl3"]
+
+[ext_resource type="Script" uid="uid://cit28858o1e3e" path="res://scripts/boy_npc_1.gd" id="1_5mb56"]
+[ext_resource type="Texture2D" uid="uid://2g7res6v5jmk" path="res://assets/npc/boy_npc2.png" id="1_mso3p"]
+[ext_resource type="FontFile" uid="uid://hsjljn64n1ap" path="res://prefabs/kvn-97.ttf" id="3_v30v6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v30v6"]
+atlas = ExtResource("1_mso3p")
+region = Rect2(165, 0, 165, 377)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_87r86"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v30v6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2urjy"]
+radius = 12.0
+height = 24.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k7to1"]
+radius = 48.010414
+
+[node name="BoyNpc1" type="CharacterBody2D" unique_id=1745143006]
+script = ExtResource("1_5mb56")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1709157273]
+position = Vector2(-8, -20)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_87r86")
+animation = &"idle"
+frame_progress = 0.54631364
+
+[node name="NameLabel" type="Label" parent="AnimatedSprite2D" unique_id=1164570426]
+offset_left = 3.333334
+offset_top = -193.33333
+offset_right = 70.0
+offset_bottom = -120.33333
+theme_override_font_sizes/font_size = 53
+text = "H"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1192233810]
+position = Vector2(-3, -17)
+shape = SubResource("CapsuleShape2D_2urjy")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1606890503]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=815782029]
+position = Vector2(-1, -10)
+shape = SubResource("CircleShape2D_k7to1")
+
+[node name="Panel" type="Panel" parent="." unique_id=1593825128]
+visible = false
+offset_left = -39.0
+offset_top = -97.0
+offset_right = 42.0
+offset_bottom = -69.0
+
+[node name="DialogueLabel" type="RichTextLabel" parent="Panel" unique_id=1115423965]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 148.0
+offset_bottom = 45.0
+theme_override_fonts/normal_font = ExtResource("3_v30v6")
+text = "HiHi!"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

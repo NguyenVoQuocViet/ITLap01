@@ -1,0 +1,372 @@
+[gd_scene format=3 uid="uid://r3ff3fm15lan"]
+
+[ext_resource type="Texture2D" uid="uid://cg6rosbtnnwg3" path="res://assets/background_main_menu.png" id="1_0ykhv"]
+[ext_resource type="Script" uid="uid://d0w4ejv0ulgma" path="res://scripts/main_menu.gd" id="1_2wh52"]
+[ext_resource type="FontFile" uid="uid://hsjljn64n1ap" path="res://prefabs/kvn-97.ttf" id="2_2wh52"]
+[ext_resource type="Script" uid="uid://bvjyruo6m5dsm" path="res://scripts/title_label.gd" id="4_ow34m"]
+[ext_resource type="AudioStream" uid="uid://bocajsemw0yo6" path="res://assets/sounds/music2.mp3" id="5_l72w3"]
+[ext_resource type="Texture2D" uid="uid://dn2xwfm8k6i2v" path="res://assets/keyboard buttons.png" id="6_826wr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ow34m"]
+bg_color = Color(0.083762325, 0.2191318, 0.41288528, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.44429362, 0.5950809, 0.9999953, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+shadow_color = Color(0.043137256, 0.12156863, 0.2901961, 1)
+shadow_size = 3
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wh52"]
+bg_color = Color(0, 0.44313726, 0.19215687, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0.7490196, 0.5764706, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+shadow_color = Color(0.14939412, 0.55757976, 0.35084996, 0.6)
+shadow_size = 4
+shadow_offset = Vector2(-1, -1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l72w3"]
+bg_color = Color(0.09862753, 0.3576074, 0.16492036, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.2324048, 0.77695453, 0.09887894, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+shadow_color = Color(6.593913e-06, 0.7186525, 0.1421997, 0.6)
+shadow_size = 3
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ykhv"]
+bg_color = Color(0, 0.44392496, 0.19348043, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1.347661e-06, 0.74804515, 0.57591546, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7la6k"]
+bg_color = Color(0.64685524, 8.1822276e-07, 0.3620033, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9722205, 0.42555383, 0.97406477, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+shadow_color = Color(1, 0.50277525, 0.8543341, 0.6)
+shadow_size = 3
+shadow_offset = Vector2(1, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bky6r"]
+bg_color = Color(0.64705884, 0, 0.36078432, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.972549, 0.42745098, 0.972549, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+shadow_color = Color(1, 0.5019608, 0.85490197, 0.6)
+shadow_offset = Vector2(1, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nypq"]
+bg_color = Color(0.73297054, 0.00010020822, 0.61504644, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9760372, 0.7995358, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+shadow_color = Color(0.9644548, 0.6003571, 1, 0.6)
+shadow_offset = Vector2(1, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_826wr"]
+bg_color = Color(0.18039216, 0.18039216, 0.18039216, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.41960785, 0.41960785, 0.41960785, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucygd"]
+bg_color = Color(0.18039216, 0.18039216, 0.18039216, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.41960785, 0.41960785, 0.41960785, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mipys"]
+bg_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.6039216, 0.6039216, 0.6039216, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+shadow_size = 2
+shadow_offset = Vector2(1, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8a8k8"]
+content_margin_left = 10.0
+content_margin_top = 8.0
+bg_color = Color(0.05882353, 0.09019608, 0.16470589, 0.24313726)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4mxc"]
+bg_color = Color(0.1992864, 5.023647e-07, 0.119196214, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.70789313, 0.0325013, 0.39444202, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[node name="MainMenu" type="ParallaxBackground" unique_id=1905562092]
+script = ExtResource("1_2wh52")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=1306933130]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer" unique_id=520601873]
+position = Vector2(945.00006, 521.5)
+scale = Vector2(1.529948, 1.2939454)
+texture = ExtResource("1_0ykhv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1888038999]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -77.0
+offset_right = 185.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 51
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=623022707]
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.51964, 0.7968345, 1, 1)
+theme_override_colors/font_pressed_color = Color(1.0203719e-05, 0.97473496, 0.69550496, 1)
+theme_override_colors/font_hover_color = Color(5.77569e-06, 0.9156003, 0.7705102, 1)
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxFlat_ow34m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2wh52")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l72w3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0ykhv")
+text = "CHƠI NGAY"
+
+[node name="ControlsButton" type="Button" parent="VBoxContainer" unique_id=1866027801]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9995536, 0.8128841, 0.9426045, 1)
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_7la6k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bky6r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2nypq")
+text = "HƯỚNG DẪN"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1247611573]
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91764706, 0.91764706, 0.91764706, 1)
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_826wr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ucygd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mipys")
+text = "THOÁT"
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1895731867]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -318.0
+offset_top = 35.0
+offset_right = 349.0
+offset_bottom = 124.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.025415203, 0.10443107, 0.1567446, 1)
+theme_override_colors/font_shadow_color = Color(7.219613e-08, 0.10201868, 0.16574794, 0)
+theme_override_colors/font_outline_color = Color(0.3764706, 0.64705884, 0.98039216, 1)
+theme_override_constants/paragraph_spacing = 0
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_8a8k8")
+text = "IT LAB 01"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+script = ExtResource("4_ow34m")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=599174983]
+stream = ExtResource("5_l72w3")
+volume_db = -4.562
+autoplay = true
+
+[node name="ControlsPanel" type="Panel" parent="." unique_id=1967675222]
+unique_name_in_owner = true
+visible = false
+offset_left = 430.0
+offset_top = 462.0
+offset_right = 773.0
+offset_bottom = 665.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_l4mxc")
+
+[node name="KeyW" type="Sprite2D" parent="ControlsPanel" unique_id=717677013]
+position = Vector2(76.0329, 24.855263)
+scale = Vector2(0.35526314, 0.35526317)
+texture = ExtResource("6_826wr")
+region_enabled = true
+region_rect = Rect2(351, 2478, 76, 78)
+
+[node name="KeyA" type="Sprite2D" parent="ControlsPanel" unique_id=382328966]
+position = Vector2(45.032898, 54.855263)
+scale = Vector2(0.35526314, 0.35526317)
+texture = ExtResource("6_826wr")
+region_enabled = true
+region_rect = Rect2(237, 2589, 79, 78)
+
+[node name="KeyS" type="Sprite2D" parent="ControlsPanel" unique_id=930193466]
+position = Vector2(75.0329, 54.855263)
+scale = Vector2(0.35526314, 0.35526317)
+texture = ExtResource("6_826wr")
+region_enabled = true
+region_rect = Rect2(351, 2590, 78, 78)
+
+[node name="KeyD" type="Sprite2D" parent="ControlsPanel" unique_id=79564684]
+position = Vector2(104.0329, 54.855263)
+scale = Vector2(0.35526314, 0.35526317)
+texture = ExtResource("6_826wr")
+region_enabled = true
+region_rect = Rect2(462, 2590, 78, 75)
+
+[node name="KeyE" type="Sprite2D" parent="ControlsPanel" unique_id=253159266]
+position = Vector2(75, 104.00001)
+scale = Vector2(0.35526314, 0.35526317)
+texture = ExtResource("6_826wr")
+region_enabled = true
+region_rect = Rect2(461, 2478, 79, 77)
+
+[node name="KeyLeftClick" type="Sprite2D" parent="ControlsPanel" unique_id=449150180]
+position = Vector2(78.05266, 163.2829)
+scale = Vector2(0.26774788, 0.42153388)
+texture = ExtResource("6_826wr")
+region_enabled = true
+region_rect = Rect2(139, 1695, 344, 82)
+
+[node name="LeftClick" type="Label" parent="ControlsPanel" unique_id=517872702]
+layout_mode = 0
+offset_left = 44.105286
+offset_top = 144.0
+offset_right = 113.105286
+offset_bottom = 167.0
+text = "Left click"
+
+[node name="Move" type="Label" parent="ControlsPanel" unique_id=1087000531]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 23.0
+offset_right = 315.0
+offset_bottom = 46.0
+theme_override_constants/line_spacing = 6
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_font_sizes/font_size = 20
+text = "Di chuyển"
+
+[node name="Interact" type="Label" parent="ControlsPanel" unique_id=1547070312]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 92.0
+offset_right = 315.0
+offset_bottom = 115.0
+theme_override_constants/line_spacing = 6
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_font_sizes/font_size = 20
+text = "Tương tác"
+
+[node name="Attack" type="Label" parent="ControlsPanel" unique_id=1767513019]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 140.0
+offset_right = 315.0
+offset_bottom = 188.0
+theme_override_constants/line_spacing = 6
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_font_sizes/font_size = 20
+text = "Tấn công (nếu có)"
+autowrap_mode = 3
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/ControlsButton" to="." method="_on_controls_button_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/ControlsButton" to="." method="_on_controls_button_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bnclx77gf3dlx"]
+
+[ext_resource type="Texture2D" uid="uid://b3nudfhccc406" path="res://assets/npc/boy_npc3.png" id="1_f2wlt"]
+[ext_resource type="Script" uid="uid://bsxawxweu5ppf" path="res://scripts/boy_npc_2.gd" id="1_lrhwb"]
+[ext_resource type="FontFile" uid="uid://hsjljn64n1ap" path="res://prefabs/kvn-97.ttf" id="3_jwgbt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrhwb"]
+atlas = ExtResource("1_f2wlt")
+region = Rect2(165, 0, 165, 377)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jwgbt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrhwb")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7g435"]
+radius = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_smn3q"]
+radius = 45.044422
+
+[node name="BoyNpc2" type="CharacterBody2D" unique_id=900482039]
+script = ExtResource("1_lrhwb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1015857861]
+position = Vector2(-4, -17)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_jwgbt")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1249728636]
+shape = SubResource("CapsuleShape2D_7g435")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=451617494]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=944338050]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_smn3q")
+
+[node name="Panel" type="Panel" parent="." unique_id=1958786650]
+visible = false
+offset_left = -65.0
+offset_top = -103.0
+offset_right = 48.0
+offset_bottom = -61.0
+
+[node name="DialogueLabel" type="RichTextLabel" parent="Panel" unique_id=1061369158]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 138.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("3_jwgbt")
+theme_override_font_sizes/normal_font_size = 16
+text = "Game dễ quá!"
+
+[node name="NameLabel" type="Label" parent="." unique_id=915873614]
+offset_left = -5.0
+offset_top = -75.0
+offset_right = 10.0
+offset_bottom = -52.0
+text = "V"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

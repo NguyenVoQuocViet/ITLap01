@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://douth0tqkfshc"]
+
+[ext_resource type="Texture2D" uid="uid://hakj304w77w4" path="res://assets/16 Bit School Asset Pack/Sliding Door Side View Opening 1.png" id="1_jkp8o"]
+[ext_resource type="Texture2D" uid="uid://dlfe3je86mf0m" path="res://assets/16 Bit School Asset Pack/Sliding Door Side View Opening 2.png" id="2_hi1ol"]
+[ext_resource type="Texture2D" uid="uid://cmbukdoras1g2" path="res://assets/16 Bit School Asset Pack/Sliding Door Side View Opening 3.png" id="3_m2vbe"]
+[ext_resource type="Texture2D" uid="uid://d1l3ua04myd8v" path="res://assets/16 Bit School Asset Pack/Sliding Door Side View Opening 4.png" id="4_aatya"]
+[ext_resource type="Texture2D" uid="uid://i13yr61fhf3f" path="res://assets/16 Bit School Asset Pack/Sliding Door Side View Opening 5.png" id="5_65uyq"]
+[ext_resource type="Script" uid="uid://iq7aixs1072p" path="res://scripts/hallway_door.gd" id="6_hi1ol"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bykoj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jkp8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hi1ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m2vbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_aatya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_65uyq")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vc5x"]
+size = Vector2(21.565216, 64.78049)
+
+[node name="HallwayDoor" type="AnimatedSprite2D" unique_id=957502562]
+scale = Vector2(1.4375, 1.28125)
+sprite_frames = SubResource("SpriteFrames_bykoj")
+animation = &"open"
+script = ExtResource("6_hi1ol")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=607789086]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=848488550]
+position = Vector2(-5.9130435, -0.3902454)
+shape = SubResource("RectangleShape2D_2vc5x")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

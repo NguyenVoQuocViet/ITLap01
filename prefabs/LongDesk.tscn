@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c4rqcsg6foykq"]
+
+[ext_resource type="Texture2D" uid="uid://cl6h6x8b2wjwc" path="res://assets/16 Bit School Asset Pack/Long Metal Desk 1.png" id="1_morpr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w66ym"]
+size = Vector2(109, 29)
+
+[node name="LongDesk" type="StaticBody2D" unique_id=1307649649]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=657069367]
+y_sort_enabled = true
+position = Vector2(-1.5, 8.5)
+shape = SubResource("RectangleShape2D_w66ym")
+
+[node name="LongMetalDesk1" type="Sprite2D" parent="." unique_id=1517796902]
+texture = ExtResource("1_morpr")

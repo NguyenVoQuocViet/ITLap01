@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bfn4vq642bayk"]
+
+[ext_resource type="Texture2D" uid="uid://bvkm41qadtrv5" path="res://assets/16 Bit School Asset Pack/Sliding Door Front View Opening 1.png" id="1_x6fmk"]
+[ext_resource type="Texture2D" uid="uid://dqhbkt4c5m6k2" path="res://assets/16 Bit School Asset Pack/Sliding Door Front View Opening 2.png" id="2_jrfd8"]
+[ext_resource type="Texture2D" uid="uid://vvgmajf1fmq3" path="res://assets/16 Bit School Asset Pack/Sliding Door Front View Opening 3.png" id="3_qkak7"]
+[ext_resource type="Texture2D" uid="uid://1s1ra0sm8wx4" path="res://assets/16 Bit School Asset Pack/Sliding Door Front View Opening 4.png" id="4_jfqiw"]
+[ext_resource type="Texture2D" uid="uid://rb2cqnbx4xa8" path="res://assets/16 Bit School Asset Pack/Sliding Door Front View Opening 5.png" id="5_i5jh8"]
+[ext_resource type="Texture2D" uid="uid://bfqg5uhmttp3" path="res://assets/16 Bit School Asset Pack/Sliding Door Front View Opening 6.png" id="6_0bmyb"]
+[ext_resource type="Script" uid="uid://csb60t6cpqxbh" path="res://scripts/wc_door.gd" id="7_jrfd8"]
+[ext_resource type="FontFile" uid="uid://hsjljn64n1ap" path="res://prefabs/kvn-97.ttf" id="8_qkak7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6cbbf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x6fmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jrfd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qkak7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jfqiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i5jh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0bmyb")
+}],
+"loop": false,
+"name": &"open",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjip5"]
+size = Vector2(72, 71)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jfqiw"]
+bg_color = Color(0.5211167, 0.68388313, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="WCDoor" type="AnimatedSprite2D" unique_id=2111802569]
+sprite_frames = SubResource("SpriteFrames_6cbbf")
+animation = &"open"
+script = ExtResource("7_jrfd8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1177026566]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=871112171]
+position = Vector2(2, 0.5)
+shape = SubResource("RectangleShape2D_gjip5")
+
+[node name="Panel" type="Panel" parent="." unique_id=776441280]
+visible = false
+offset_left = -17.0
+offset_top = -57.0
+offset_right = 17.0
+offset_bottom = -35.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jfqiw")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1311855493]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 33.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.15127608, 0.15127608, 0.15127608, 1)
+theme_override_fonts/font = ExtResource("8_qkak7")
+text = "WC"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

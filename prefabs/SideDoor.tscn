@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bx2t8pke8aswi"]
+
+[ext_resource type="Texture2D" uid="uid://hakj304w77w4" path="res://assets/16 Bit School Asset Pack/Sliding Door Side View Opening 1.png" id="1_yoyvk"]
+[ext_resource type="Texture2D" uid="uid://dlfe3je86mf0m" path="res://assets/16 Bit School Asset Pack/Sliding Door Side View Opening 2.png" id="2_m3s3d"]
+[ext_resource type="Texture2D" uid="uid://cmbukdoras1g2" path="res://assets/16 Bit School Asset Pack/Sliding Door Side View Opening 3.png" id="3_1qy2x"]
+[ext_resource type="Texture2D" uid="uid://d1l3ua04myd8v" path="res://assets/16 Bit School Asset Pack/Sliding Door Side View Opening 4.png" id="4_h2i3b"]
+[ext_resource type="Texture2D" uid="uid://i13yr61fhf3f" path="res://assets/16 Bit School Asset Pack/Sliding Door Side View Opening 5.png" id="5_sidf1"]
+[ext_resource type="Script" uid="uid://bt4ettd3w60ne" path="res://scripts/side_door.gd" id="6_m3s3d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4poo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yoyvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m3s3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1qy2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h2i3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sidf1")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvf31"]
+size = Vector2(31.581396, 71.18919)
+
+[node name="SideDoor" type="AnimatedSprite2D" unique_id=1232148438]
+scale = Vector2(1.34375, 1.15625)
+sprite_frames = SubResource("SpriteFrames_g4poo")
+animation = &"open"
+frame_progress = 0.18532576
+script = ExtResource("6_m3s3d")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=430766284]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=922096943]
+position = Vector2(-5.790698, -1.5945952)
+shape = SubResource("RectangleShape2D_gvf31")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

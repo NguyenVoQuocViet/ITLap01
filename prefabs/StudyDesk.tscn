@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bi1a2gehs6kql"]
+
+[ext_resource type="Script" uid="uid://c1hlixcssg8vn" path="res://scripts/StudyDesk.gd" id="1_ouodo"]
+[ext_resource type="Texture2D" uid="uid://cfa7bh8sr6rg5" path="res://assets/16 Bit School Asset Pack/Small Metal Desk 4.png" id="2_3xwm7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npx2t"]
+size = Vector2(21.333334, 6)
+
+[node name="StudyDesk" type="StaticBody2D" unique_id=877640006]
+y_sort_enabled = true
+script = ExtResource("1_ouodo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=396328787]
+position = Vector2(4.7683716e-07, -3)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_npx2t")
+
+[node name="LongMetalDesk1" type="Sprite2D" parent="." unique_id=513967782]
+scale = Vector2(0.99062496, 0.95000005)
+texture = ExtResource("2_3xwm7")

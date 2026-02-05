@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://cnbdevrf77wbt"]
+
+[ext_resource type="Script" uid="uid://c4wjhxfm0v2mv" path="res://scripts/boy_npc_3.gd" id="1_6oj3s"]
+[ext_resource type="Texture2D" uid="uid://cpetifvy1d5q8" path="res://assets/npc/boy_npc4.png" id="1_jvxqe"]
+[ext_resource type="FontFile" uid="uid://hsjljn64n1ap" path="res://prefabs/kvn-97.ttf" id="3_4ipbc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6oj3s"]
+atlas = ExtResource("1_jvxqe")
+region = Rect2(432, 0, 216, 266)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ipbc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6oj3s")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lhm46"]
+radius = 20.0
+height = 40.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lm0uj"]
+radius = 38.013157
+
+[node name="BoyNpc3" type="CharacterBody2D" unique_id=466953460]
+script = ExtResource("1_6oj3s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=404615233]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_4ipbc")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2117971771]
+position = Vector2(0, 11)
+shape = SubResource("CapsuleShape2D_lhm46")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1943991473]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=666294635]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_lm0uj")
+
+[node name="Panel" type="Panel" parent="." unique_id=252358818]
+visible = false
+z_index = 1
+offset_left = -124.0
+offset_top = -85.0
+offset_right = 143.0
+offset_bottom = -36.0
+
+[node name="DialogueLabel" type="RichTextLabel" parent="Panel" unique_id=1006917572]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_4ipbc")
+theme_override_font_sizes/normal_font_size = 16
+text = "Hello em! Mở máy và làm bài nhé!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLabel" type="Label" parent="." unique_id=902592674]
+offset_left = -6.0
+offset_top = -63.0
+offset_right = 8.0
+offset_bottom = -40.0
+text = "K"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

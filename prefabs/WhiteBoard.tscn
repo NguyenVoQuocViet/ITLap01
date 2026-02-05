@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cpv5oa02qrewp"]
+
+[ext_resource type="Texture2D" uid="uid://bqmmum0051hv4" path="res://assets/things_assest.png" id="1_2m7xw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67fvo"]
+size = Vector2(115.5, 81.5)
+
+[node name="WhiteBoard" type="StaticBody2D" unique_id=692775682]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2023865466]
+position = Vector2(1.25, -40.75)
+shape = SubResource("RectangleShape2D_67fvo")
+
+[node name="ThingsAssest" type="Sprite2D" parent="." unique_id=1095676077]
+texture = ExtResource("1_2m7xw")
+offset = Vector2(0, -50)
+region_enabled = true
+region_rect = Rect2(897, 662, 114, 67)

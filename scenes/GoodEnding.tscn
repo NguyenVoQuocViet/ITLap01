@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://blhqm4sxkspvt"]
+
+[ext_resource type="FontFile" uid="uid://hsjljn64n1ap" path="res://prefabs/kvn-97.ttf" id="1_fa3vp"]
+[ext_resource type="Script" uid="uid://djjis3u0bhc64" path="res://scripts/label_ending2.gd" id="2_h2f4d"]
+[ext_resource type="AudioStream" uid="uid://dkodc8jkw4biw" path="res://assets/sounds/keyboard-clicks-sfx.wav" id="2_mv74p"]
+
+[node name="BadEnding" type="CanvasLayer" unique_id=1463521606]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1083260221]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1219294075]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -164.0
+offset_right = 367.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.7441841, 0.26771814, 1)
+theme_override_fonts/font = ExtResource("1_fa3vp")
+theme_override_font_sizes/font_size = 70
+text = "GOOD ENDING ??"
+
+[node name="Label2" type="Label" parent="." unique_id=1654464587]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -464.0
+offset_top = -20.0
+offset_right = 496.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 19
+theme_override_fonts/font = ExtResource("1_fa3vp")
+theme_override_font_sizes/font_size = 40
+text = "Bạn dùng chìa khóa để mở cửa. Nhưng ngoài kia tràn ngập Zombies... Bạn phải làm gì nữa đây ??"
+autowrap_mode = 3
+script = ExtResource("2_h2f4d")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="Label2" unique_id=1064962164]
+stream = ExtResource("2_mv74p")

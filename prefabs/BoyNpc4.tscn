@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dalxo3w6oxqxs"]
+
+[ext_resource type="Texture2D" uid="uid://w2v8nxjwd4oi" path="res://assets/npc/boy_npc5.png" id="1_pvk8a"]
+[ext_resource type="Script" uid="uid://cxawdwkjnrfcx" path="res://scripts/boy_npc_4.gd" id="1_ts54v"]
+[ext_resource type="FontFile" uid="uid://hsjljn64n1ap" path="res://prefabs/kvn-97.ttf" id="2_i8gtc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8gtc"]
+atlas = ExtResource("1_pvk8a")
+region = Rect2(172, 0, 172, 188)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ts54v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8gtc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7m34f"]
+radius = 16.0
+height = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hywl3"]
+radius = 38.0
+
+[node name="BoyNpc4" type="CharacterBody2D" unique_id=1201343487]
+script = ExtResource("1_ts54v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1645775485]
+position = Vector2(-0.99999994, -18.999998)
+scale = Vector2(0.42, 0.42)
+sprite_frames = SubResource("SpriteFrames_ts54v")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=640489775]
+position = Vector2(1, -11)
+shape = SubResource("CapsuleShape2D_7m34f")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=900943976]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=328842447]
+position = Vector2(-1, -11)
+shape = SubResource("CircleShape2D_hywl3")
+
+[node name="Panel" type="Panel" parent="." unique_id=877066708]
+visible = false
+offset_left = -34.0
+offset_top = -82.0
+offset_right = 26.0
+offset_bottom = -56.0
+
+[node name="DialogueLabel" type="RichTextLabel" parent="Panel" unique_id=787445013]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 2.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("2_i8gtc")
+text = "Hehe"
+
+[node name="NameLabel" type="Label" parent="." unique_id=927977728]
+offset_left = -5.0
+offset_top = -80.0
+offset_right = 6.0
+offset_bottom = -57.0
+text = "L"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

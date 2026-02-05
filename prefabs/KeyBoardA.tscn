@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bp6fsva51mtm1"]
+
+[ext_resource type="Script" uid="uid://6xb3m02ht0wi" path="res://scripts/key_board_a.gd" id="1_3mb6e"]
+[ext_resource type="Texture2D" uid="uid://dn2xwfm8k6i2v" path="res://assets/keyboard buttons.png" id="1_71ix3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mb6e"]
+size = Vector2(54, 22)
+
+[node name="KeyBoard" type="Area2D" unique_id=1699983247]
+script = ExtResource("1_3mb6e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=730847841]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_71ix3")
+region_enabled = true
+region_rect = Rect2(232, 3135, 1790, 769)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=330699095]
+z_index = 1
+shape = SubResource("RectangleShape2D_3mb6e")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

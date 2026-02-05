@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ydqu463hbanc"]
+
+[ext_resource type="Texture2D" uid="uid://bqmmum0051hv4" path="res://assets/things_assest.png" id="1_spfsn"]
+
+[node name="Keyboard" type="Sprite2D" unique_id=199507644]
+
+[node name="ThingsAssest" type="Sprite2D" parent="." unique_id=1401827636]
+y_sort_enabled = true
+texture = ExtResource("1_spfsn")
+offset = Vector2(0, -15)
+region_enabled = true
+region_rect = Rect2(540, 465, 30, 12)
