@@ -29,7 +29,7 @@ IT LAB 01 là một trò chơi nhập vai, giải đố kết hợp yếu tố k
     Assets: Pixel Art (Custom & Open Source & AI).
 
 🚀 Cài Đặt và Chạy Game  
-Tải file .zip tại đây: [Download IT Lab 01 v1.0](https://github.com/NguyenVoQuocViet/ITLap01/releases/download/v1.0/IT_Lap_01.zip)
+Tải file .zip tại đây: [Download IT Lab 01 v1.0](https://github.com/NguyenVoQuocViet/ITLap01/releases/download/v1.0/IT_Lab_01.exe)
         
     Dành cho mấy bạn muốn tò mò:
       • Clone repository: git clone https://github.com/yourusername/it-lab-01.git
@@ -50,4 +50,5 @@ Chưa có cập nhật :D
 🤝 Đóng Góp & Liên Hệ
 
 Dự án được thực hiện bởi tui :D trong 5 ngày :D. Mọi ý kiến đóng góp vui lòng mở một Issue trên GitHub này.
+
 
