@@ -4,15 +4,15 @@ IT LAB 01 là một trò chơi nhập vai, giải đố kết hợp yếu tố k
 
 🌟 Tính Năng Nổi Bật  
 
-    Hệ thống AI Zombie thông Minh: Zombie sử dụng NavigationAgent2D để tìm đường né vật cản và đuổi theo người  
-    chơi trong môi trường phòng học phức tạp.  
+    Hệ thống AI Zombie thông minh: Zombie sử dụng NavigationAgent2D để tìm đường né vật cản và đuổi theo  
+    người chơi.
   
     Tương tác với môi trường: Hệ thống tương tác cho phép người chơi thực hiện các hành động   
     như rửa mặt tại bồn rửa để tiến triển cốt truyện.  
   
     Âm thanh động:  
       • Tiếng bước chân thay đổi theo chuyển động.  
-      • Tiếng Zombie gầm gừ ngẫu nhiên bằng AudioStreamPlayer2D giúp cảm nhận vị trí kẻ thù.  
+      • Tiếng Zombie gầm gừ ngẫu nhiên giúp cảm nhận vị trí kẻ thù.  
     
 🕹️ Điều Khiển
 
@@ -28,12 +28,8 @@ IT LAB 01 là một trò chơi nhập vai, giải đố kết hợp yếu tố k
     Phần cứng phát triển: HP Victus 15 (Core i5-12450H, 16GB RAM, GTX 1650).
     Assets: Pixel Art (Custom & Open Source & AI).
 
-🚀 Cài Đặt và Chạy Game
-
-    Dành cho mấy bạn muốn chơi thử:
-      • Tải file .zip từ mục [Releases] (nếu có).
-      • Giải nén và chạy file IT_Lab_01.exe.
-      • Lưu ý: Không được xóa file .pck đi kèm.
+🚀 Cài Đặt và Chạy Game  
+Tải file .zip tại đây: [Download IT Lab 01 v1.0](https://github.com/NguyenVoQuocViet/ITLap01/releases/download/v1.0/IT_Lap_01.zip)
         
     Dành cho mấy bạn muốn tò mò:
       • Clone repository: git clone https://github.com/yourusername/it-lab-01.git
@@ -54,3 +50,4 @@ Chưa có cập nhật :D
 🤝 Đóng Góp & Liên Hệ
 
 Dự án được thực hiện bởi tui :D trong 5 ngày :D. Mọi ý kiến đóng góp vui lòng mở một Issue trên GitHub này.
+
