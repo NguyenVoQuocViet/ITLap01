@@ -1,12 +1,11 @@
 extends Panel
 
-var has_answered = false 
+var has_answered = false
 
 # --- NÚT ĐÁP ÁN 1 ---
 func _on_ans_1_pressed():
 	if has_answered: return
-	
-	# Nếu là ngày 3 và Ans 1 là câu đúng bạn đã soạn
+
 	if GameManager.current_day == 3:
 		process_correct_answer()
 	else:
@@ -16,13 +15,11 @@ func _on_ans_1_pressed():
 func _on_ans_2_pressed():
 	if has_answered: return
 	
-	# Nếu là ngày 2 và Ans 2 là câu đúng bạn đã soạn
 	if GameManager.current_day == 2:
 		process_correct_answer()
 	else:
 		process_wrong_answer()
-
-# --- NÚT ĐÁP ÁN 3 ---
+		
 func _on_ans_3_pressed():
 	if has_answered: return
 	if GameManager.current_day == 2:
@@ -43,7 +40,7 @@ func process_correct_answer():
 		show_result("Bạn nhận được chìa khóa!")
 	else:
 		show_result("Chính xác!")
-
+		
 func process_wrong_answer():
 	lock_assignment()
 	show_result("Sai rồi!")
@@ -65,15 +62,13 @@ func lock_assignment():
 	$Ans1.disabled = true
 	$Ans2.disabled = true
 	$Ans3.disabled = true
-	GameManager.ready_to_go_home = true # Làm xong là được về
-
+	GameManager.ready_to_go_home = true
+	
 func show_result(text):
-	# Code hiện thông báo kết quả của bạn giữ nguyên
 	$Label.text = text
 	await get_tree().create_timer(2.0).timeout
 	hide()
 	
-	# Hiện lời thoại nhắc nhở
 	var diag_label = get_tree().current_scene.get_node("%DialogueLabel")
 	var diag_panel = get_tree().current_scene.get_node("%Panel")
 	if GameManager.current_day == 2:
@@ -83,6 +78,6 @@ func show_result(text):
 	diag_panel.show()
 	await get_tree().create_timer(3.0).timeout
 	diag_panel.hide()
-
+	
 func _on_close_button_pressed():
 	hide()

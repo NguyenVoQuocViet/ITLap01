@@ -7,7 +7,11 @@ extends CharacterBody2D
 @onready var footstep_sound = $FootstepSound
 var last_direction = "down"
 
-var keyboard_scene = preload("res://prefabs/KeyboardA.tscn")
+var keyboard_scene = preload("res://prefabs/KeyBoardA.tscn")
+
+func _ready():
+	await get_tree().create_timer(0.1).timeout
+	GameManager.is_interacting = false
 
 func _input(event):
 	# Kiểm tra nút chuột trái (action "attack")
@@ -28,22 +32,19 @@ func throw_keyboard():
 	get_tree().current_scene.add_child(kb)
 
 func _physics_process(_delta):
-	if GameManager.is_interacting:
-		velocity = Vector2.ZERO
-		return
-		
-	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	var direction = Vector2.ZERO
 	
+	if not GameManager.is_interacting:
+		direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+		
 	if direction != Vector2.ZERO:
 		velocity = direction * speed
 		update_animation("walk", direction)
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, speed)
 		update_animation("idle", Vector2.ZERO)
-
 	move_and_slide()
 
-	# 2. Thêm lại lệnh kiểm tra phím E tại đây
 	if Input.is_action_just_pressed("interact"):
 		execute_interaction()
 		
