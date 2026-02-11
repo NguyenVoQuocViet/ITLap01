@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://bnclx77gf3dlx" path="res://prefabs/BoyNpc2.tscn" id="24_1n3w2"]
 [ext_resource type="PackedScene" uid="uid://cnbdevrf77wbt" path="res://prefabs/BoyNpc3.tscn" id="25_gjkno"]
 [ext_resource type="AudioStream" uid="uid://u0awaawnnof5" path="res://assets/sounds/music1.mp3" id="26_plbmq"]
+[ext_resource type="PackedScene" uid="uid://boivqtaocjjgd" path="res://prefabs/MobileUI.tscn" id="27_lf48r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ummub"]
 texture = ExtResource("1_jxxy8")
@@ -183,6 +184,8 @@ position = Vector2(169, 75)
 [node name="StudyDesk" parent="." unique_id=1734882457 instance=ExtResource("6_qxvff")]
 position = Vector2(258, 433)
 
+[node name="MobileUI" parent="." unique_id=1341651927 instance=ExtResource("27_lf48r")]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=751313785]
 
 [node name="AssignmentUI" type="Panel" parent="CanvasLayer" unique_id=563184338]
@@ -303,10 +306,10 @@ offset_bottom = 95.0
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1223075283]
 unique_name_in_owner = true
 visible = false
-offset_left = 684.0
-offset_top = 752.0
-offset_right = 1171.0
-offset_bottom = 817.0
+offset_left = 834.0
+offset_top = 747.0
+offset_right = 1429.0
+offset_bottom = 812.0
 
 [node name="DialogueLabel" type="Label" parent="CanvasLayer/Panel" unique_id=1745078302]
 unique_name_in_owner = true
@@ -321,7 +324,7 @@ theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_sgydd")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "Hoàn thành bài tập"
 label_settings = SubResource("LabelSettings_sgydd")
 horizontal_alignment = 1
@@ -330,6 +333,7 @@ vertical_alignment = 1
 [node name="ScreenFade" type="ColorRect" parent="CanvasLayer" unique_id=1280596357]
 unique_name_in_owner = true
 visible = false
+z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

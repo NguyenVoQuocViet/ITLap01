@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://bvjyruo6m5dsm" path="res://scripts/title_label.gd" id="4_ow34m"]
 [ext_resource type="AudioStream" uid="uid://bocajsemw0yo6" path="res://assets/sounds/music2.mp3" id="5_l72w3"]
 [ext_resource type="Texture2D" uid="uid://dn2xwfm8k6i2v" path="res://assets/keyboard buttons.png" id="6_826wr"]
+[ext_resource type="Texture2D" uid="uid://dt13r06u87fib" path="res://addons/virtual_joystick/textures/joystick_tip_arrows.png" id="7_8a8k8"]
+[ext_resource type="Texture2D" uid="uid://d2tafyhc18hux" path="res://assets/mobile/Hand_icon.png" id="8_7la6k"]
+[ext_resource type="Texture2D" uid="uid://dj1rmn32hwf83" path="res://assets/mobile/Attack_icon.png" id="9_2nypq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ow34m"]
 bg_color = Color(0.083762325, 0.2191318, 0.41288528, 1)
@@ -183,8 +186,8 @@ script = ExtResource("1_2wh52")
 [node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=1306933130]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer" unique_id=520601873]
-position = Vector2(945.00006, 521.5)
-scale = Vector2(1.529948, 1.2939454)
+position = Vector2(1151, 611.49994)
+scale = Vector2(1.7981771, 1.4697266)
 texture = ExtResource("1_0ykhv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1888038999]
@@ -193,14 +196,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -142.0
-offset_top = -77.0
-offset_right = 185.0
-offset_bottom = 94.0
+offset_left = -163.5
+offset_top = -141.0
+offset_right = 163.5
+offset_bottom = 141.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 51
 alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=623022707]
 custom_minimum_size = Vector2(100, 60)
@@ -274,48 +278,48 @@ autoplay = true
 unique_name_in_owner = true
 visible = false
 offset_left = 430.0
-offset_top = 462.0
+offset_top = 403.0
 offset_right = 773.0
-offset_bottom = 665.0
+offset_bottom = 674.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_l4mxc")
 
 [node name="KeyW" type="Sprite2D" parent="ControlsPanel" unique_id=717677013]
-position = Vector2(76.0329, 24.855263)
+position = Vector2(76.0329, 86.85526)
 scale = Vector2(0.35526314, 0.35526317)
 texture = ExtResource("6_826wr")
 region_enabled = true
 region_rect = Rect2(351, 2478, 76, 78)
 
 [node name="KeyA" type="Sprite2D" parent="ControlsPanel" unique_id=382328966]
-position = Vector2(45.032898, 54.855263)
+position = Vector2(45.032898, 116.85526)
 scale = Vector2(0.35526314, 0.35526317)
 texture = ExtResource("6_826wr")
 region_enabled = true
 region_rect = Rect2(237, 2589, 79, 78)
 
 [node name="KeyS" type="Sprite2D" parent="ControlsPanel" unique_id=930193466]
-position = Vector2(75.0329, 54.855263)
+position = Vector2(75.0329, 116.85526)
 scale = Vector2(0.35526314, 0.35526317)
 texture = ExtResource("6_826wr")
 region_enabled = true
 region_rect = Rect2(351, 2590, 78, 78)
 
 [node name="KeyD" type="Sprite2D" parent="ControlsPanel" unique_id=79564684]
-position = Vector2(104.0329, 54.855263)
+position = Vector2(104.0329, 116.85526)
 scale = Vector2(0.35526314, 0.35526317)
 texture = ExtResource("6_826wr")
 region_enabled = true
 region_rect = Rect2(462, 2590, 78, 75)
 
 [node name="KeyE" type="Sprite2D" parent="ControlsPanel" unique_id=253159266]
-position = Vector2(75, 104.00001)
+position = Vector2(75, 166)
 scale = Vector2(0.35526314, 0.35526317)
 texture = ExtResource("6_826wr")
 region_enabled = true
 region_rect = Rect2(461, 2478, 79, 77)
 
 [node name="KeyLeftClick" type="Sprite2D" parent="ControlsPanel" unique_id=449150180]
-position = Vector2(78.05266, 163.2829)
+position = Vector2(78.05266, 225.2829)
 scale = Vector2(0.26774788, 0.42153388)
 texture = ExtResource("6_826wr")
 region_enabled = true
@@ -324,29 +328,41 @@ region_rect = Rect2(139, 1695, 344, 82)
 [node name="LeftClick" type="Label" parent="ControlsPanel" unique_id=517872702]
 layout_mode = 0
 offset_left = 44.105286
-offset_top = 144.0
+offset_top = 206.0
 offset_right = 113.105286
-offset_bottom = 167.0
+offset_bottom = 229.0
 text = "Left click"
 
 [node name="Move" type="Label" parent="ControlsPanel" unique_id=1087000531]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 23.0
+offset_top = 85.0
 offset_right = 315.0
-offset_bottom = 46.0
+offset_bottom = 108.0
 theme_override_constants/line_spacing = 6
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("2_2wh52")
 theme_override_font_sizes/font_size = 20
 text = "Di chuyển"
 
+[node name="System" type="Label" parent="ControlsPanel" unique_id=941359434]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 18.0
+offset_right = 262.0
+offset_bottom = 41.0
+theme_override_constants/line_spacing = 6
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_font_sizes/font_size = 20
+text = "Desktop"
+
 [node name="Interact" type="Label" parent="ControlsPanel" unique_id=1547070312]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 92.0
+offset_top = 154.0
 offset_right = 315.0
-offset_bottom = 115.0
+offset_bottom = 177.0
 theme_override_constants/line_spacing = 6
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("2_2wh52")
@@ -356,9 +372,9 @@ text = "Tương tác"
 [node name="Attack" type="Label" parent="ControlsPanel" unique_id=1767513019]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 140.0
+offset_top = 202.0
 offset_right = 315.0
-offset_bottom = 188.0
+offset_bottom = 250.0
 theme_override_constants/line_spacing = 6
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("2_2wh52")
@@ -366,7 +382,81 @@ theme_override_font_sizes/font_size = 20
 text = "Tấn công (nếu có)"
 autowrap_mode = 3
 
+[node name="ControlsPanel2" type="Panel" parent="." unique_id=631173023]
+unique_name_in_owner = true
+visible = false
+offset_left = 1456.0
+offset_top = 395.0
+offset_right = 1853.0
+offset_bottom = 700.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_l4mxc")
+
+[node name="Move2" type="Sprite2D" parent="ControlsPanel2" unique_id=1640111349]
+position = Vector2(64.99996, 90.00002)
+scale = Vector2(0.7350005, 0.7015917)
+texture = ExtResource("7_8a8k8")
+
+[node name="KeyE2" type="Sprite2D" parent="ControlsPanel2" unique_id=1881608589]
+position = Vector2(64.999954, 177.99998)
+scale = Vector2(0.29550022, 0.28206852)
+texture = ExtResource("8_7la6k")
+
+[node name="KeyAttack" type="Sprite2D" parent="ControlsPanel2" unique_id=2134485233]
+position = Vector2(66, 258.99997)
+scale = Vector2(0.14137505, 0.13494898)
+texture = ExtResource("9_2nypq")
+
+[node name="Move" type="Label" parent="ControlsPanel2" unique_id=139092269]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 85.0
+offset_right = 315.0
+offset_bottom = 108.0
+theme_override_constants/line_spacing = 6
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_font_sizes/font_size = 27
+text = "Di chuyển"
+
+[node name="System" type="Label" parent="ControlsPanel2" unique_id=2091637293]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 17.0
+offset_right = 293.0
+offset_bottom = 40.0
+theme_override_constants/line_spacing = 6
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_font_sizes/font_size = 27
+text = "Mobile"
+
+[node name="Interact" type="Label" parent="ControlsPanel2" unique_id=1786370201]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 169.0
+offset_right = 372.0
+offset_bottom = 196.0
+theme_override_constants/line_spacing = 6
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_font_sizes/font_size = 27
+text = "Tương tác"
+
+[node name="Attack" type="Label" parent="ControlsPanel2" unique_id=1845029658]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 229.0
+offset_right = 385.0
+offset_bottom = 289.0
+theme_override_constants/line_spacing = 6
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2wh52")
+theme_override_font_sizes/font_size = 27
+text = "Tấn công (nếu có)"
+autowrap_mode = 3
+
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/ControlsButton" to="." method="_on_controls_button_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer/ControlsButton" to="." method="_on_controls_button_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
