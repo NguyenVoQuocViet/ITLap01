@@ -27,8 +27,10 @@
 * Assets: Pixel Art (Custom & Open Source & AI).
 
 ### 🚀 Cài Đặt và Chạy Game  
-**Tải file .zip tại đây: [Download IT Lab 01 v1.0](https://github.com/NguyenVoQuocViet/ITLap01/releases/download/v1.0/IT_Lab_01.zip) (Nếu thấy thông báo "Windows protected your PC", hãy chọn "More" rồi chọn "Run away", không có virus đâu :D)**
-        
+**Desktop: Tải file .zip tại đây: [Download IT Lab 01 v1.0](https://github.com/NguyenVoQuocViet/ITLap01/releases/download/v1.0/IT_Lab_01.zip) (Nếu thấy thông báo "Windows protected your PC", hãy chọn "More" rồi chọn "Run away", không có virus đâu :D)**
+
+**Mobile: Tải file .apk tại đây: [Download IT Lab 01 v1.0](https://github.com/NguyenVoQuocViet/ITLap01/releases/download/v1.0/IT_LAB_01.apk)**        
+
 **Dành cho mấy bạn muốn tò mò:**
 * Clone repository: git clone https://github.com/yourusername/it-lab-01.git
 * Mở Godot Engine 4.
@@ -44,10 +46,12 @@
 ### 📜 Cập Nhật Gần Đây
 
 - Chỉnh sửa lỗi controls keys cho file .exe
+- Thêm bản mobile (android)
 
 ### 🤝 Đóng Góp & Liên Hệ
 
 **Dự án được thực hiện trong 5 ngày :D. Mọi ý kiến đóng góp vui lòng mở một Issue trên GitHub này :D.**
+
 
 
 
